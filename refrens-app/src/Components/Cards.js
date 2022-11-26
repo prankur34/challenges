@@ -24,6 +24,14 @@ function Cards({ data }) {
                   <h1 class="tracking-widest text-xl title-font font-medium text-white mb-1">
                     {name}
                   </h1>
+                  <details>
+                    <summary>Channels Appeared</summary>
+
+                    {episode.map((eps) => {
+                      return <p className="m-2 cursor-pointer">{eps}</p>;
+                    })}
+                  </details>
+
                   <div class="p-1">
                     <span class="inline-block bg-gray-200 rounded-full p-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                       {location.name}
