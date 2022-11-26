@@ -4,7 +4,6 @@ import Cards from "../Components/Cards";
 import { getDataFromAPI } from "../Services";
 function Homepage() {
   const [apiData, setApiData] = useState();
-  console.log("🚀 ~ file: Homepage.js ~ line 7 ~ Homepage ~ apiData", apiData);
   const url = "https://rickandmortyapi.com/api/character";
 
   useEffect(() => {
@@ -23,7 +22,7 @@ function Homepage() {
       <div className="flex w-full flex-wrap justify-center items-center text-gray-400 bg-gray-900 body-font">
         {apiData &&
           apiData?.results?.map((data) => {
-            return <Cards data={data} />;
+            return <Cards data={data} key={data.id} />;
           })}
       </div>
     </div>
