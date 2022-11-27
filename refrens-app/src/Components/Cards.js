@@ -1,9 +1,11 @@
 import React from "react";
 
 function Cards({ data }) {
+  // destructuring the app data recieved from api
   const { name, species, gender, image, location, origin, episode } = data;
   return (
     <div>
+      {/* recieved data is being mapped into the card component as per the use cases */}
       <section className="text-gray-400 bg-gray-900 body-font">
         <div className="container p-2 mx-auto">
           <div className="flex flex-wrap w-full">
@@ -26,7 +28,7 @@ function Cards({ data }) {
                   </h1>
                   <details>
                     <summary>Channels Appeared</summary>
-
+                    {/* displaying thr episode data which is an array */}
                     {episode.map((eps) => {
                       return (
                         <p className="m-2 cursor-pointer" key={eps.id}>

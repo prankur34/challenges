@@ -1,6 +1,7 @@
 import React from "react";
 
 function Header() {
+  // a basic simpe header component with text
   return (
     <div>
       <header
