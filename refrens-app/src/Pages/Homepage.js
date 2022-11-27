@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Cards from "../Components/Cards";
 import { getDataFromAPI } from "../Services";
+
 function Homepage() {
   const [apiData, setApiData] = useState();
   const url = "https://rickandmortyapi.com/api/character";
@@ -9,12 +10,6 @@ function Homepage() {
   useEffect(() => {
     getDataFromAPI(url, setApiData);
   }, []);
-
-  // Each profile should include:
-  // The character’s picture done
-  // The character’s information (name, species, gender, etc.)
-  // Origin and current location (name, dimension, amount of residents, etc.) -> important
-  // Name of the chapters the character is featured in -> important
 
   return (
     <div>
